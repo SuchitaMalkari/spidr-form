@@ -37,7 +37,6 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-[#0d0d0d] overflow-hidden px-4">
-      {/* Background animation */}
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -76,7 +75,6 @@ export default function App() {
         }}
       />
 
-      {/* Form */}
       <form
         onSubmit={handleSubmit}
         className="relative z-10 w-full max-w-xl bg-[#111] border border-purple-700 rounded-2xl shadow-xl shadow-purple-900/40 p-8 space-y-6"
@@ -85,8 +83,7 @@ export default function App() {
           Spidr Interest Form 🕸️
         </h2>
 
-        {/* Fields */}
-        {[
+        {[ 
           { name: 'firstName', label: 'First Name' },
           { name: 'lastName', label: 'Last Name' },
           {
@@ -132,7 +129,7 @@ export default function App() {
           </div>
         ))}
 
-        {/* Spidr PIN */}
+        {/* Spidr PIN Field */}
         <div className="relative z-0 w-full group">
           {showPin ? (
             <input
@@ -146,7 +143,7 @@ export default function App() {
               }}
               placeholder=" "
               required
-              pattern="\\d{4}-\\d{4}-\\d{4}-\\d{4}"
+              pattern="\d{4}-\d{4}-\d{4}-\d{4}"
               className="block px-4 pt-5 pb-2 w-full text-md text-white bg-transparent rounded-md border border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-purple-400 peer pr-10 tracking-widest font-mono"
             />
           ) : (
@@ -181,11 +178,10 @@ export default function App() {
             onClick={() => setShowPin(!showPin)}
             className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white text-xl"
           >
-            {showPin ? '👁️' : ' 🙈'}
+            {showPin ? '👁️' : '🙈'}
           </button>
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="relative inline-block px-8 py-3 font-semibold text-white group hover:text-black transition-all duration-300"
